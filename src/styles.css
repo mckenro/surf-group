@@ -22,3 +22,8 @@ h3.link {
   background: #EEF5DB;
   border-radius: 10px;
 }
+
+.roleSelect {
+  width: 25%;
+  margin: 12px;
+}

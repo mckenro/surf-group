@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class MainpageComponent implements OnInit {
   members: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  filterByRole: string = "allMembers";
 
   constructor(private router: Router, private memberService: MemberService){}
 
@@ -22,6 +23,10 @@ export class MainpageComponent implements OnInit {
 
   goToDetailPage(clickedMember) {
     this.router.navigate(['members', clickedMember.$key]);
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByRole = optionFromMenu;
   }
 
 }

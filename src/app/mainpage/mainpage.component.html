@@ -1,15 +1,30 @@
 <h3>View Surf Group Members</h3>
 
+<div class="roleSelect" *ngIf="currentRoute === '/'">
+  <label for="roleBox">Filter by Role: </label>
+  <select id="roleBox" class="form-control" (change)="onChange($event.target.value)">
+    <option value="allMembers" selected="selected">All Members</option>
+    <option value="president">President</option>
+    <option value="vice-president">Vice President</option>
+    <option value="treasurer">Treasurer</option>
+    <option value="admin">Admin</option>
+    <option value="user">User</option>
+  </select>
+</div>
+
 <div class="row">
-  <div *ngFor="let member of members | async" class="panel panel-default col-md-4">
+
+  <div *ngFor="let member of members | async | rolepipe:filterByRole" class="panel panel-default col-md-4">
 
       <div class="panel-body">
         <img src="{{member.image}}">
         <h3 class="link" (click)="goToDetailPage(member)">{{member.firstName}} {{member.lastName}}</h3>
-        <p>{{member.bio}}</p>
+        <p><strong>Role: </strong>{{member.role}}</p>
+
         <div *ngIf="currentRoute === '/admin'">
           <p><strong>Role: </strong>{{member.role}}</p>
           <p><strong>Location: </strong>{{member.city}}</p>
+          <p>{{member.bio}}</p>
           <hr>
           <app-edit-member [selectedMember]="member"></app-edit-member>
         </div>
