@@ -1,0 +1,19 @@
+<h3>View Surf Group Members</h3>
+
+<div class="row">
+  <div *ngFor="let member of members | async" class="panel panel-default col-md-4">
+
+      <div class="panel-body">
+        <img src="{{member.image}}">
+        <h3 (click)="goToDetailPage(member)">{{member.firstName}} {{member.lastName}}</h3>
+        <p>{{member.bio}}</p>
+        <div *ngIf="currentRoute === '/admin'">
+          <p><strong>Role: </strong>{{member.role}}</p>
+          <p><strong>Location: </strong>{{member.city}}</p>
+          <hr>
+          <app-edit-member [selectedMember]="member"></app-edit-member>
+        </div>
+      </div>
+
+  </div>
+</div>

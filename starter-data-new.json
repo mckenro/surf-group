@@ -1,0 +1,27 @@
+{"members": [{
+    "id": "0",
+    "firstName": "Dane",
+    "lastName": "Reynolds",
+    "bio": "I like to surf on rail and git soooo pitted!",
+    "city": "Santa Barbara",
+    "role": "admin",
+    "image": "https://www.surfholidays.com/assets/images/blog/2010-10-12-Surfer-Profile-Dane-Reynolds-1.jpg"
+  }, {
+    "id": "1",
+    "firstName": "Joe",
+    "lastName": "Turpel",
+    "bio": "When I'm not in the water I enjoy looking at Yew Toob!",
+    "city": "Pacific Beach",
+    "role": "vice-president",
+    "image": "http://floridasurffilmfestival.com/wp-content/uploads/2012/12/13784.jpg"
+    }, {
+      "id": "2",
+      "firstName": "Crystal",
+      "lastName": "Walker",
+      "bio": "I like camping in San Diego so I can catch the dawn patrol!",
+      "city": "Encinitas",
+      "role": "user",
+      "image": "http://lwmag.co.za/wp-content/uploads/2016/06/Crystal-by-Luke.jpeg"
+      }
+]
+}
