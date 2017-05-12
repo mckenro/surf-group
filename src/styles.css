@@ -12,3 +12,13 @@
   width: 30%;
   margin-right: 20px;
 }
+
+h3.link {
+  cursor: pointer;
+  color: #E63462;
+}
+
+.sidebar {
+  background: #EEF5DB;
+  border-radius: 10px;
+}

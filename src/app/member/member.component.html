@@ -1,6 +1,8 @@
-<h2>{{(memberToDisplay | async)?.title}}  ${{(memberToDisplay | async)?.price}}</h2>
+<h2>{{(memberToDisplay | async)?.firstName}} {{(memberToDisplay | async)?.lastName}}</h2>
 <div class="member-image">
   <img src="{{(memberToDisplay | async)?.image}}">
 </div>
-<p>{{(memberToDisplay | async)?.description}}</p>
-<p><strong>Location: </strong>{{(memberToDisplay | async)?.city}}, {{(memberToDisplay | async)?.state}} {{(memberToDisplay | async)?.zip}}</p>
+<br>
+<p>{{(memberToDisplay | async)?.bio}}</p>
+<p><strong>Role: </strong>{{(memberToDisplay | async)?.role}}</p>
+<p><strong>Location: </strong>{{(memberToDisplay | async)?.city}}</p>

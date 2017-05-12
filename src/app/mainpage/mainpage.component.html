@@ -5,7 +5,7 @@
 
       <div class="panel-body">
         <img src="{{member.image}}">
-        <h3 (click)="goToDetailPage(member)">{{member.firstName}} {{member.lastName}}</h3>
+        <h3 class="link" (click)="goToDetailPage(member)">{{member.firstName}} {{member.lastName}}</h3>
         <p>{{member.bio}}</p>
         <div *ngIf="currentRoute === '/admin'">
           <p><strong>Role: </strong>{{member.role}}</p>
