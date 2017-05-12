@@ -28,3 +28,8 @@ h3.link {
   width: 25%;
   margin: 12px;
 }
+
+.hero-image img {
+  width: 100%;
+  border-radius: 30px;
+}
