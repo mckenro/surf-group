@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import { Member } from './member.model'
+import { Member } from './member.model';
 
 @Injectable()
 export class MemberService {
@@ -10,7 +10,7 @@ export class MemberService {
     this.members = database.list('members');
   }
 
-  getMembers(){
+  getMembers() {
     return this.members;
   }
 
@@ -18,12 +18,12 @@ export class MemberService {
     this.members.push(newMember);
   }
 
-  getMemberById(memberId: string){
+  getMemberById(memberId: string) {
     return this.database.object('members/' + memberId);
   }
 
-  updateMember(localUpdatedMember){
-    var memberEntryInFirebase = this.getMemberById(localUpdatedMember.$key);
+  updateMember(localUpdatedMember) {
+    const memberEntryInFirebase = this.getMemberById(localUpdatedMember.$key);
     memberEntryInFirebase.update({
       firstName: localUpdatedMember.firstName,
       lastName: localUpdatedMember.lastName,
@@ -34,8 +34,8 @@ export class MemberService {
     });
   }
 
-  deleteMember(localMemberToDelete){
-    var memberEntryInFirebase = this.getMemberById(localMemberToDelete.$key);
+  deleteMember(localMemberToDelete) {
+    const memberEntryInFirebase = this.getMemberById(localMemberToDelete.$key);
     memberEntryInFirebase.remove();
   }
 

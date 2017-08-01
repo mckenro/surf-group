@@ -13,11 +13,11 @@ import { Router } from '@angular/router';
 export class MainpageComponent implements OnInit {
   members: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
-  filterByRole: string = "allMembers";
+  filterByRole: any = 'allMembers';
 
-  constructor(private router: Router, private memberService: MemberService){}
+  constructor(private router: Router, private memberService: MemberService) {}
 
-  ngOnInit(){
+  ngOnInit() {
     this.members = this.memberService.getMembers();
   }
 
